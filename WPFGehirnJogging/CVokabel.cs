@@ -8,5 +8,9 @@ namespace WPFGehirnJogging
 {
     class CVokabel
     {
+        private string _deutscheWort;
+        private string[] _englischesWort;
+
+
     }
 }
