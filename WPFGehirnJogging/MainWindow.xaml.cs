@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFGehirnJogging.Klassen;
 
 namespace WPFGehirnJogging
 {
@@ -23,6 +24,14 @@ namespace WPFGehirnJogging
         public MainWindow()
         {
             InitializeComponent();
+            CDataReader cdr = new CDataReader();
+
+            string filesource = "C:\\Users\\jonaspenner\\source\\repos\\WPFGehirnJogging\\vl.csv";
+            Dictionary<string, string[]> dic_Vokabel = new Dictionary<string, string[]>();
+            dic_Vokabel = cdr.CsvEinlesen(filesource);
+
+
         }
+
     }
 }

@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFGehirnJogging"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="GehirnJogging" Height="680" Width="1024">
     <Grid>
-        
+        <Button x:Name="BtnKopfrechnen" Background="Transparent" BorderThickness="0,0" Content="Kopfrechnen" HorizontalAlignment="Left" Margin="60,292,0,0" VerticalAlignment="Top" Width="260" Height="80" FontFamily="Segoe UI Mono" FontSize="24"/>
+        <Button x:Name="BtnQuizfragen" Background="Transparent" BorderThickness="0,0" Content="Quizfragen" HorizontalAlignment="Left" Margin="60,372,0,0" VerticalAlignment="Top" Width="260" Height="80" FontFamily="Segoe UI Mono" FontSize="24"/>
+        <Button x:Name="BtnVokabeltrainer" Background="Transparent" Margin="60,155,636,414" Height="100" BorderThickness="0,0" Width="320">
+            <StackPanel Orientation="Horizontal" Height="100" Width="320">
+                <Image Source="C:\Users\jonaspenner\source\repos\WPFGehirnJogging\Bilder\Vokabeltrainer.png" Stretch="Fill" Width="60" Margin="0,10,0,30"/>
+                <TextBlock FontFamily="Segoe UI Mono" FontSize="24" Margin="5,0,0,0"><Run Text="Vokabeltrainer" /></TextBlock>
+            </StackPanel>
+        </Button>
     </Grid>
 </Window>
