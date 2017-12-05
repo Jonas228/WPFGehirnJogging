@@ -6,45 +6,11 @@
         xmlns:local="clr-namespace:WPFGehirnJogging"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"  WindowState="Maximized"
-        Title="GehirnJogging" Height="1080" Width="1920" Background="White">
+        Title="GehirnJogging" Height="900" Width="1440" Background="White">
 
     <Grid>
-        <StackPanel HorizontalAlignment="Left" Width="286" Margin="10,110,0,0" RenderTransformOrigin="0.5,0.5" >
-            <StackPanel.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="0.379"/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="0.993"/>
-                </TransformGroup>
-            </StackPanel.RenderTransform>
-            <Button x:Name="BtnVokabeltrainer" Background="Transparent" BorderThickness="0,0" Height="80" Click="BtnVokabeltrainer_Click">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="300">
-                    <Image Source="C:\Users\jonaspenner\source\repos\WPFGehirnJogging\Bilder\Vokabeltrainer.png" Stretch="Fill" Width="60" Height="60" Margin="15,0,0,0" StretchDirection="DownOnly"/>
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold" FontFamily="Segoe UI Mono" FontSize="24">Vokabeltrainer</TextBlock>
-                </StackPanel>
-            </Button>
-            <Button x:Name="BtnKopfrechnen" Background="Transparent" BorderThickness="0,0" Height="80">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="300">
-                    <Image Source="C:\Users\jonaspenner\source\repos\WPFGehirnJogging\Bilder\Kopfrechnen.png" Stretch="Fill" Width="60" Height="60" Margin="15,0,0,0" StretchDirection="DownOnly"/>
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold" FontFamily="Segoe UI Mono" FontSize="24">Kopfrechnen</TextBlock>
-                </StackPanel>
-            </Button>
-            <Button x:Name="BtnQuizfragen" Background="Transparent" BorderThickness="0,0" Height="80">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="300">
-                    <Image Source="C:\Users\jonaspenner\source\repos\WPFGehirnJogging\Bilder\Quizfragen.png" Stretch="Fill" Width="60" Height="60" Margin="15,0,0,0" StretchDirection="DownOnly"/>
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold" FontFamily="Segoe UI Mono" FontSize="24">Quizfragen</TextBlock>
-                </StackPanel>
-            </Button>
-            <Button x:Name="BtnBenutzer" Background="Transparent" BorderThickness="0,0" Height="80">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="300">
-                    <Image Source="C:\Users\jonaspenner\source\repos\WPFGehirnJogging\Bilder\Benutzer.png" Stretch="Fill" Width="60" Height="60" Margin="15,0,0,0" StretchDirection="DownOnly"/>
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold" FontFamily="Segoe UI Mono" FontSize="24">About You</TextBlock>
-                </StackPanel>
-            </Button>
-        </StackPanel>
-        <Frame x:Name="Main" Content="Frame" BorderBrush="Chartreuse" HorizontalAlignment="Left" Height="929" Margin="301,110,0,0" VerticalAlignment="Top" Width="1601" NavigationUIVisibility="Hidden"/>
-        <Label Content="Gehirn Jogging V1.0" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI Mono" FontSize="45" Margin="20,30,0,0" VerticalAlignment="Top" Width="1892" />
-
+        <Frame x:Name="MainFrame" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Margin="10,110,10,10" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden">
+        </Frame>
+        <Label Content="Gehirn Jogging V1.0" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI Mono" FontSize="45" Margin="20,30,0,0" VerticalAlignment="Top" Width="Auto" />
     </Grid>
 </Window>

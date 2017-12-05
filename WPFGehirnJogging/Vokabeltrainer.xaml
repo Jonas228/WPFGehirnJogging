@@ -3,13 +3,43 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
       xmlns:local="clr-namespace:WPFGehirnJogging"
       mc:Ignorable="d" 
-      d:DesignHeight="900" d:DesignWidth="1600"
-      Title="Vokabeltrainer">
+      d:DesignHeight="900" d:DesignWidth="1600" 
+      Title="Vokabeltrainer" Background="White">
 
-    <Grid Background="White" >
-        <TextBox x:Name="TxtPfadCsv" HorizontalAlignment="Left" Height="46" Margin="46,63,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="786" Background="White"/>
-        <Button Content="..." HorizontalAlignment="Left" Margin="863,63,0,0" VerticalAlignment="Top" Width="66" Height="46" Click="Button_Click"/>
+    <Grid x:Name="SettingVokabeltrainer" Margin="10,100,10,0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="149*">
+            </RowDefinition>
+            <RowDefinition Height="81*">
+            </RowDefinition>
+            <RowDefinition Height="570*">
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*">
+            </ColumnDefinition>
+            <ColumnDefinition Width="*">
+            </ColumnDefinition>
+            <ColumnDefinition Width="*">
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" FontSize="30" FontWeight="Bold">Schwierigkeitsgrad</Label>
+        <Label Grid.Column="0" Grid.Row="1" FontSize="30" FontWeight="Bold">Zeit</Label>
+        <StackPanel Grid.Column="1" Grid.Row="0">
+            <RadioButton GroupName="Schwierigkeitsgrad" FontSize="24" Margin="0,5" Background="Green">Leicht</RadioButton>
+            <RadioButton GroupName="Schwierigkeitsgrad" FontSize="24" Margin="0,5" Background="Yellow">Mittel</RadioButton>
+            <RadioButton GroupName="Schwierigkeitsgrad" FontSize="24" Margin="0,5" Background="Red">Schwer</RadioButton>
+        </StackPanel>
+
+        <WindowsFormsHost Grid.Column="1" Grid.Row="1">
+            <wf:NumericUpDown x:Name="NumericUpDown">
+                
+            </wf:NumericUpDown>
+        </WindowsFormsHost>
+
     </Grid>
 </Page>

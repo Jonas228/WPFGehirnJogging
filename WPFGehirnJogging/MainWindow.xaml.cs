@@ -24,23 +24,21 @@ namespace WPFGehirnJogging
         public MainWindow()
         {
             InitializeComponent();
-            CDataReader cdr = new CDataReader();
-
-            string filesource = "C:\\Users\\jonaspenner\\source\\repos\\WPFGehirnJogging\\vl.csv";
-            Dictionary<string, string[]> dic_Vokabel = new Dictionary<string, string[]>();
-            dic_Vokabel = cdr.CsvEinlesen(filesource);
             double Width = SystemParameters.PrimaryScreenWidth;
             double Height = SystemParameters.PrimaryScreenHeight;
             this.Width = Width;
             this.Height = Height;
             this.ResizeMode = ResizeMode.NoResize;
+            //Iniatilisierung von NavigationService
+            NavigationService navigationService = NavigationService.GetNavigationService(this);
+            Loaded += MainWindow_Loaded;
 
         }
 
-        private void BtnVokabeltrainer_Click(object sender, RoutedEventArgs e)
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Vokabeltrainer();
-          
+            //Beim Starten wird das Menü in das MainFrame geladen
+            MainFrame.NavigationService.Navigate(new Uri("Menü.xaml", UriKind.Relative));
         }
     }
 }

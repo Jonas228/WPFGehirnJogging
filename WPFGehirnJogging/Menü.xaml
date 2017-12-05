@@ -1,0 +1,53 @@
+﻿<Page x:Class="WPFGehirnJogging.Menü"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPFGehirnJogging"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Menü">
+
+    <Grid  Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*">
+                
+            </RowDefinition>
+            <RowDefinition Height="*">
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*">
+                
+            </ColumnDefinition>
+            <ColumnDefinition Width="*">
+
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" x:Name="BtnVokabeltrainer" BorderThickness="0,0" Background="Transparent" Click="BtnVokabeltrainer_Click">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="300">
+                <Image Source="C:\Users\jonaspenner\source\repos\WPFGehirnJogging\Bilder\Vokabeltrainer.png" Stretch="Fill" Width="60" Height="60" Margin="15,0,0,0" StretchDirection="DownOnly"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold" FontFamily="Segoe UI Mono" FontSize="24">Vokabeltrainer</TextBlock>
+            </StackPanel>
+        </Button>
+        <Button Grid.Row="0" Grid.Column="1" x:Name="BtnKopfrechnen" BorderThickness="0,0" Background="Transparent">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="300">
+                <Image Source="C:\Users\jonaspenner\source\repos\WPFGehirnJogging\Bilder\Kopfrechnen.png" Stretch="Fill" Width="60" Height="60" Margin="15,0,0,0" StretchDirection="DownOnly"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold" FontFamily="Segoe UI Mono" FontSize="24">Kopfrechnen</TextBlock>
+            </StackPanel>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="0" x:Name="BtnQuizfragen" BorderThickness="0,0" Background="Transparent">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="300">
+                <Image Source="C:\Users\jonaspenner\source\repos\WPFGehirnJogging\Bilder\Quizfragen.png" Stretch="Fill" Width="60" Height="60" Margin="15,0,0,0" StretchDirection="DownOnly"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold" FontFamily="Segoe UI Mono" FontSize="24">Quizfragen</TextBlock>
+            </StackPanel>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="1" x:Name="BtnAboutYou" BorderThickness="0,0" Background="Transparent">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="300">
+                <Image Source="C:\Users\jonaspenner\source\repos\WPFGehirnJogging\Bilder\Benutzer.png" Stretch="Fill" Width="60" Height="60" Margin="15,0,0,0" StretchDirection="DownOnly"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold" FontFamily="Segoe UI Mono" FontSize="24">About You</TextBlock>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Page>
