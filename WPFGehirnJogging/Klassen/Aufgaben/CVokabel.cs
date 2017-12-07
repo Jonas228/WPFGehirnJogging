@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPFGehirnJogging.Klassen
 {
-    internal class CVokabel
+    internal class CVokabel : CAufgaben
     {
         private string _deutscheWort;
         private string[] _englischesWort;
@@ -21,5 +21,24 @@ namespace WPFGehirnJogging.Klassen
         public string[] EnglischesWort { get => _englischesWort; set => _englischesWort = value; }
         public int AnzahlFalsch { get => _anzahlFalsch; set => _anzahlFalsch = value; }
         public int AnzahlRichtig { get => _anzahlRichtig; set => _anzahlRichtig = value; }
+
+        public override void DisplayResult()
+        {
+            
+        }
+
+        public override bool CheckResult(string Result)
+        {
+            foreach (var Wort in EnglischesWort)
+            {
+                if (Result.Contains(Wort))
+                {
+                    return true;   
+                }
+            }
+            return false;
+
+        }
+        
     }
 }

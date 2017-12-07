@@ -28,13 +28,13 @@
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Label Grid.Column="0" Grid.Row="0" FontSize="30" FontWeight="Bold">Schwierigkeitsgrad</Label>
-        <Label Grid.Column="0" Grid.Row="1" FontSize="30" FontWeight="Bold">Zeit</Label>
+        <Label Grid.Column="0" Grid.Row="1" FontSize="30" FontWeight="Bold">Modus</Label>
         <StackPanel Grid.Column="1" Grid.Row="0">
             <RadioButton GroupName="Schwierigkeitsgrad" FontSize="24" Margin="0,5" Background="Green">Leicht</RadioButton>
             <RadioButton GroupName="Schwierigkeitsgrad" FontSize="24" Margin="0,5" Background="Yellow">Mittel</RadioButton>
             <RadioButton GroupName="Schwierigkeitsgrad" FontSize="24" Margin="0,5" Background="Red">Schwer</RadioButton>
-        </StackPanel>
-
+        </StackPanel >
+        
         <WindowsFormsHost Grid.Column="1" Grid.Row="1">
             <wf:NumericUpDown x:Name="NumericUpDown">
                 
