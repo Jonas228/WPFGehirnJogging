@@ -14,9 +14,10 @@ namespace WPFGehirnJogging.Klassen
             
         }
 
-        public Dictionary<string, string[]> CsvEinlesen(string filesource)
+        public Dictionary<string, string[]> CsvEinlesen()
         {
             //Einlesen der CSV Datei und speichern der Vokabeln in ein Dictionary
+            string filesource = "C:\\Users\\jonaspenner\\source\\repos\\WPFGehirnJogging\\vl.csv";
             if (File.Exists(filesource))
             {
                 Dictionary<string, string[]> dic = new Dictionary<string, string[]>();
@@ -27,9 +28,12 @@ namespace WPFGehirnJogging.Klassen
                 for (var i = 0; i < lines.Length; i++)
                 {
                     values = lines[i].Split(separator: ';');
-                    var vocab = new CVokabel();
-                    vocab.DeutschesWort = values[0];
-                    vocab.EnglischesWort = values;
+                    //Deklaration von der Vokabel
+                    var vocab = new CVokabel
+                    {
+                        DeutschesWort = values[0],
+                        EnglischesWort = values
+                    };
                     dic.Add(vocab.DeutschesWort, vocab.EnglischesWort);
                 }
                 return dic;

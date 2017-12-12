@@ -89,6 +89,9 @@
     <Compile Include="Vokabeltrainer.xaml.cs">
       <DependentUpon>Vokabeltrainer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vokabeltrainer2.xaml.cs">
+      <DependentUpon>Vokabeltrainer2.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -107,6 +110,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Vokabeltrainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vokabeltrainer2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

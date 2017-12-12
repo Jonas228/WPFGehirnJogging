@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPFGehirnJogging.Klassen;
+using MessageBox = System.Windows.MessageBox;
 
 namespace WPFGehirnJogging
 {
@@ -27,14 +28,12 @@ namespace WPFGehirnJogging
         public Vokabeltrainer()
         {
             InitializeComponent();
-            
-            //Einlesen der CSV Datei
-            //string filesource = "C:\\Users\\jonaspenner\\source\\repos\\WPFGehirnJogging\\vl.csv";
-            //Dictionary<string, string[]> dic_Vokabel = new Dictionary<string, string[]>();
-            //dic_Vokabel = cdr.CsvEinlesen(filesource);
-           
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new Uri("Vokabeltrainer2.xaml", UriKind.Relative));
+        }
     }
 }
 
